@@ -26,12 +26,12 @@
 						<table class="table">
 							<thead>
 								<tr>
-									<th>Employee Name</th>
-									<th>Role</th>
-									<th>Start Date</th>
-									<th>Months Worked</th>
-									<th>Monthly Rate ($)</th>
-									<th>Total Billed ($)</th>
+									<th>Train Name</th>
+									<th>Destination</th>
+									<th>First Train</th>
+									<th>Frequency (Mins)</th>
+									<th>Next Arrival</th>
+									<th>Minutes Away</th>
 								</tr>
 							</thead>
 							<tbody class="tbody">
@@ -52,20 +52,20 @@
 					<div class="panel-body">
 						<form>
 							<div class="form-group">
-								<label for="employeeNameInput">Employee Name</label>
-								<input type="text" placeholder="ex: Ryan House" class="form-control" id="employeeNameInput">
+								<label for="trainNameInput">Train Name</label>
+								<input type="text" placeholder="ex: 3:10 to Yuma" class="form-control" id="trainNameInput">
 							</div>
 							<div class="form-group">
-								<label for="employeeRoleInput">Role</label>
-								<input type="text" placeholder="ex: CEO or Technician" class="form-control" id="employeeRoleInput">
+								<label for="trainDestinationInput">Destination</label>
+								<input type="text" placeholder="ex: to Tuskegee" class="form-control" id="trainDestinationInput">
 							</div>
 							<div class="form-group">
-								<label for="employeeStartInput">Start Date (DD/MM/YYYY)</label>
-								<input type="date" placeholder="ex: Jan 06, 2005 = 06/01/2005" class="form-control" id="employeeStartInput">
+								<label for="frequencyInput">Frequency (mins)</label>
+								<input type="number" placeholder="ex: 20 --> every 20mins" class="form-control" id="frequencyInput">
 							</div>
 							<div class="form-group">
-								<label for="employeeRateInput">Monthly Rate</label>
-								<input type="number" placeholder="ex: 123 = $123 per Month" class="form-control" id="employeeRateInput">
+								<label for="firstTrainInput">First Train (HH:mm - military time)</label>
+								<input type="text" placeholder="16:30 --> 4:30pm" class="form-control" id="firstTrainInput">
 							</div>
 							<button type="submit" class="btn btn-default" id="submitBtn">Submit</button>
 						</form>
@@ -78,7 +78,10 @@
 
 
 	</div>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.2/moment.min.js"></script>
-<script type="text/javascript" src="assets/javascript/app.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.6.0/firebase.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.2/moment.min.js"></script>
+	<script type="text/javascript" src="assets/javascript/app.js"></script>
+
+</body>
+</html>
