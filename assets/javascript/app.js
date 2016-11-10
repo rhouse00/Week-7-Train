@@ -50,16 +50,12 @@ database.ref().on("child_added", function(childSnapshot) {
 	var newNextTd = $("<td>");
 	var newMinutesAwayTd = $("<td>");
 
-	// var frequency2 = 20;
-	// var start2 = "16:30";
-
 	var firstTimeConverted = moment(start,"hh:mm").subtract(1, "years");
 	var currentTime = moment();
-	var timeDiff2 = moment().diff(firstTimeConverted, "minutes");
-	var timeRemainder = timeDiff2 % frequency;
+	var timeDiff = moment().diff(firstTimeConverted, "minutes");
+	var timeRemainder = timeDiff % frequency;
 	var minutesNextTrain = frequency - timeRemainder;
 	var nextTrain = moment().add(minutesNextTrain, "minutes").format("hh:mm");
-	// console.log()
 
 	newTrainTd.text(name);
 	newDestinationTd.text(destination);
